@@ -2,6 +2,7 @@ package com.example.test_media_projection.ui
 
 import android.app.Activity
 import android.media.projection.MediaProjectionManager
+import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.material3.Button
@@ -24,6 +25,7 @@ fun CaptureScreen(sharedViewModel: SharedViewModel) {
                 result.resultCode,
                 result.data!!
             )
+            Log.d("onClick", "Start Screen Capture")
         }
     }
     Button(onClick = {
